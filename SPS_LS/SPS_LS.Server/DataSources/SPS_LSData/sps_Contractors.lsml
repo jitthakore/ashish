@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_Contractor">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Plant"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="Contractor_ID"
+        PropertyType=":Decimal">
+        <KeyProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="18"
+            Scale="0" />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Contractor_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Contact_No"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Active"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="New_ID"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="9"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_Contractor_Modules"
+        Association="FK_sps_Contractor_Module_sps_Contractor"
+        FromEnd="sps_Contractor"
+        ToEnd="sps_Contractor_Module" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_sps_Contractor_Module_sps_Contractor">
+    <AssociationEnd
+      Name="sps_Contractor"
+      Multiplicity="One"
+      EntityType="sps_Contractor">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_Contractor_Module"
+      Multiplicity="Many"
+      EntityType="sps_Contractor_Module" />
+  </Association>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_Contractors"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_Contractor" />
+    <AssociationSet
+      Name="FK_sps_Contractor_Module_sps_Contractor"
+      Association="FK_sps_Contractor_Module_sps_Contractor">
+      <AssociationSetEnd
+        Name="sps_Contractor"
+        EntitySet="sps_Contractors" />
+      <AssociationSetEnd
+        Name="sps_Contractor_Module"
+        EntitySet="sps_Contractor_Modules" />
+    </AssociationSet>
+    <QueryOperation
+      Name="sps_Contractors_Single"
+      ReturnType="sps_Contractor">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Contractor_ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Contractor_ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Contractors" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Contractor_ID"
+        ParameterType="Microsoft.LightSwitch:Decimal?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Contractor_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_Contractors_SingleOrDefault"
+      ReturnType="sps_Contractor">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Contractor_ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Contractor_ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Contractors" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Contractor_ID"
+        ParameterType="Microsoft.LightSwitch:Decimal?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Contractor_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_Contractors">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_Contractor" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Plant"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Contractor/Properties[Plant]" />
+        <SsdlProperty
+          Name="Contractor_ID"
+          Nullable="False"
+          Type="numeric"
+          Property="sps_Contractor/Properties[Contractor_ID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Contractor_Name"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Contractor/Properties[Contractor_Name]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Address"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Contractor/Properties[Address]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Contact_No"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Contractor/Properties[Contact_No]" />
+        <SsdlProperty
+          Name="Active"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Contractor/Properties[Active]" />
+        <SsdlProperty
+          Name="New_ID"
+          Nullable="True"
+          Precision="9"
+          Type="numeric"
+          Property="sps_Contractor/Properties[New_ID]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_Contractor_Module_sps_Contractor">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_Contractor_Module_sps_Contractor" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_Contractor_Module_sps_Contractor]/Members[sps_Contractor]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Contractor_ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_Contractor_Module_sps_Contractor]/Members[sps_Contractor_Module]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Contractor_ID_l2_Contractor" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

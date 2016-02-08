@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_PWHT">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="PWHT_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="PWHT_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Instruction1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Instruction2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Location"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Offer_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Authorize_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Authorize_date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QA_Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="New_ReportNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Old_ReportNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_Module"
+        Association="FK_sps_PWHT_sps_Module"
+        FromEnd="sps_PWHT"
+        ToEnd="sps_Module" />
+      <NavigationProperty
+        Name="sps_PWHTDetails"
+        Association="FK_sps_PWHTDetail_sps_PWHT"
+        FromEnd="sps_PWHT"
+        ToEnd="sps_PWHTDetail" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_PWHTs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_PWHT" />
+    <QueryOperation
+      Name="sps_PWHTs_Single"
+      ReturnType="sps_PWHT">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PWHT_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="PWHT_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_PWHTs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PWHT_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PWHT_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_PWHTs_SingleOrDefault"
+      ReturnType="sps_PWHT">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PWHT_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="PWHT_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_PWHTs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PWHT_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PWHT_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="FK_sps_PWHTDetail_sps_PWHT"
+      Association="FK_sps_PWHTDetail_sps_PWHT">
+      <AssociationSetEnd
+        Name="sps_PWHT"
+        EntitySet="sps_PWHTs" />
+      <AssociationSetEnd
+        Name="sps_PWHTDetail"
+        EntitySet="sps_PWHTDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association
+    Name="FK_sps_PWHTDetail_sps_PWHT">
+    <AssociationEnd
+      Name="sps_PWHT"
+      Multiplicity="One"
+      EntityType="sps_PWHT">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_PWHTDetail"
+      Multiplicity="Many"
+      EntityType="sps_PWHTDetail" />
+  </Association>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_PWHTs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_PWHT" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="PWHT_No"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_PWHT/Properties[PWHT_No]" />
+        <SsdlProperty
+          Name="PWHT_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_PWHT/Properties[PWHT_Date]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Instruction1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Instruction1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Instruction2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Instruction2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Location"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Location]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Offer_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Offer_By]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Authorize_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Authorize_By]" />
+        <SsdlProperty
+          Name="Authorize_date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_PWHT/Properties[Authorize_date]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Insp_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Insp_By]" />
+        <SsdlProperty
+          Name="Insp_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_PWHT/Properties[Insp_Date]" />
+        <SsdlProperty
+          Name="Status"
+          Nullable="True"
+          Type="bigint"
+          Property="sps_PWHT/Properties[Status]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Remark]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="QA_Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[QA_Remark]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="Remark1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Remark1]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="Remark2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Remark2]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="Remark3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Remark3]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="Remark4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Remark4]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="New_ReportNo"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[New_ReportNo]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Old_ReportNo"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHT/Properties[Old_ReportNo]" />
+        <SsdlForeignKeyProperty
+          MaxLength="30"
+          Name="Module_ID_l2_Module"
+          Nullable="True"
+          Type="varchar"
+          PropertyName="Module_ID_l2_Module" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_PWHTDetail_sps_PWHT">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_PWHTDetail_sps_PWHT" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_PWHTDetail_sps_PWHT]/Members[sps_PWHT]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PWHT_No" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_PWHTDetail_sps_PWHT]/Members[sps_PWHTDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PWHT_No_l2_PWHT" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

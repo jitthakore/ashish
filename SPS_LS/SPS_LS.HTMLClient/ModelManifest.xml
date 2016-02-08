@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\GET_CONTRACTORs.lsml" Checksum="2E82D5800776CD9E9A6A9C31A10BEAC4D56C06B02AD4EF3C6C6C5CEB43B15CC6" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_Contractors.lsml" Checksum="07DE5694D4D6E12DB534A411FC2EEC2725A974495D60C9A7FE92C8CF09203C33" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_DrgLists.lsml" Checksum="0522558F26B07F51A1DC703605DC8031FD19AF7AD317D5B8183AD020B09C955C" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_Locations.lsml" Checksum="623CA4815489F762F1A21C68840252558EB7B0A96260752F5ED83945308F0020" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_Modules.lsml" Checksum="4DAB47E97970CF5C640E76D2D7D39D604363A04C3EDEB0E39339B2C4FBA37562" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_Projects.lsml" Checksum="47E3105ECAF4183A268A5C864C0F7614336CE3329786FA2473EF4BC636AD9F90" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_View_Get_Drg_No_For_PWHTs.lsml" Checksum="AE7B2145AC68178BD9CF2F254A284A1780FA7D04852711AF7004FD4D4646F7F7" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_View_Get_Drg_No_For_WVFs.lsml" Checksum="0BEDB30B90F9745FA5873953540CD63ED9EBE77212ECCF3051238359762C6EF6" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_View_Get_FTUDetail_For_Offers.lsml" Checksum="EA406CE302FAA268A6A4E3B8222FB625B2D4343D0689F9201844595558D33E09" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\SPS_LSData\sps_View_Get_Joint_No_For_WVFs.lsml" Checksum="D34EE181FAFEAFEE4B2792110FEC25736DB650CC0450FB93A2CB7E806871E38E" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\Client.lsml" Checksum="9CA9CCCD2B760E94559D344C920A9FAEDCD875CF2DD38215C103352F2F98ACAF" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Properties\Proxies.lsml" Checksum="0290953CBF4D29439CCE3838213A3991E662DCEC568B796EA98032AA97C9661C" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\buffer\AddEdit_NDEReq2.lsml" Checksum="EF1F1DD33CD221E959C62DDB4F4BA3C793D7932742BD12399F7A84052FC02AE5" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\buffer\AddEditsps_NDEReq1.lsml" Checksum="BB9D408831868E02B0426EBC263628ABCAE363E27A9840FF21A366211B01DFB3" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Delete\AddEditsps_WVF1.lsml" Checksum="F9EC65C59C82A906AF08F5D12D6FDBA6C83302F230B9712465864A2A60C5B1D7" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Delete\WVFDelete.lsml" Checksum="CFF3FE6867E1983A583E6E4B19A5627C2323ECC014C8A37585F1959B92E9DFA7" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\AddEdit_Hardness_Report.lsml" Checksum="4DBBFC2371023DB687538DC8F8A57193E875B71F1EB3C343FCF441073710B222" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\Inspect_FITUP1.lsml" Checksum="DDC52B5B8759F9C5B84028426BC28C4F0743177AAD061E010C95F570C11E55E9" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\Inspect_FITUP2.lsml" Checksum="EAF8368D14101B5A37474D7D3EF9EC570A196F4FDDB0A0945DAF555CA117E9F7" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\Inspect_MI1.lsml" Checksum="71CB5869A040479144DF954AD41055CF8DA68546111D0437577C52AFBD7DAB8A" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\Inspect_MI2.lsml" Checksum="57D96BD1DFE00301CF11C17914F164FEBAC1A460216BCA4B4AA670654B8FEDB0" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\Inspect_PWHT1.lsml" Checksum="3D04C324F81BF68387A45105ED07D7AA0671DE00B9D4590169E394C5426220C8" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\Inspect_PWHT2.lsml" Checksum="1D89CAFB1137A653DDE8C9AFD6001AF6E8B26A103144691955CFC13F57EFBC29" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\Inspect_WVF2.lsml" Checksum="C2FB0246B27F2CEB91DD7656462725CD4C07754B065446483DC7074F93F255FA" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Inspect\WVFInspect1.lsml" Checksum="3646649EEF4E18489FDF5272A7C3867C66B45DDADE444B5CEFDBB7B535E37258" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_FTU.lsml" Checksum="9ABD9C4FFF7E35AD94549D38053A1B455D694FD0A128BAAB6A2D658710B2E75E" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_FTUDetail.lsml" Checksum="15217B144DA15FDC2083221EFB46E5A18633481B7C38FD91EE450E916065F32A" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_MPI.lsml" Checksum="489BC551B9937BF1AF696EA6F97E7F40BFAB234D2C864EDF4DFA30CF1060223C" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_MPI_Detail_Off.lsml" Checksum="A265898045760DA3159CCD00ECFA9B3F348D8766BA9A7D11626FFACA224DA54A" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_NDEReq.lsml" Checksum="E2588B9FD72BD817FAC752671CD5EEA33A2B0914D95653FF1EB70F56BB2BD5A7" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_PWHT.lsml" Checksum="ABD49D69788F39507FA78584321B7CA75888700D617F3248C77D910794314FEA" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_PWHTDetail.lsml" Checksum="719DB4621192DDA42AEAEFFF43434E5516975E9FF6607B8FA9F597841358A3DF" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_WVF.lsml" Checksum="1911F1EC73627AF33EB13B6EAEBB9728AF4CD9C9FA6434D1E59BCE900D7D5F6F" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\OFFER\AddEditsps_WVFDetail.lsml" Checksum="826354FB2EF4011C3F63CA666E0EDABACBC05D0FAADDD0542A724575522E2263" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Browsesps_Projects.lsml" Checksum="5EA4A40E66481582F151018AC72317B4A915CF92170D87BB89DEB2B4C15615BE" />
+    <Document FullPath="C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\Screens\Menu.lsml" Checksum="A66B4DE580E6142D48659F6A55C055E8311DB6F88A8087C1E4E4B0B96C461E38" />
+  </Documents>
+</ModelDocumentManifest>

@@ -1,0 +1,920 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_View_Get_JointDetail_for_FitupOffer">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Drg_ID_1"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Drg_ID_2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Drg_ID_3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Drg_ID_4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Drg_ID_5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="Joint_ID"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Joint_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Part1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WPS"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Weld_Process"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LenSize"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="61" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Material"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="Joint_Category"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="flg_Critical_Joint"
+        PropertyType=":Boolean">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_View_Get_JointDetail_for_FitupOffers"
+      EntityType="sps_View_Get_JointDetail_for_FitupOffer" />
+    <QueryOperation
+      Name="sps_View_Get_JointDetail_for_FitupOffers_Single"
+      ReturnType="sps_View_Get_JointDetail_for_FitupOffer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="flg_Critical_Joint" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="flg_Critical_Joint" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Joint_Category" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Joint_Category" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Joint_No" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Joint_No" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Joint_ID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Joint_ID" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Drg_ID_1" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Drg_ID_1" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_View_Get_JointDetail_for_FitupOffers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Drg_ID_1"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Drg_ID_1' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_Category"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_Category' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_Critical_Joint"
+        ParameterType="Microsoft.LightSwitch:Boolean?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_Critical_Joint' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_View_Get_JointDetail_for_FitupOffers_SingleOrDefault"
+      ReturnType="sps_View_Get_JointDetail_for_FitupOffer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="flg_Critical_Joint" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="flg_Critical_Joint" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Joint_Category" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Joint_Category" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Joint_No" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Joint_No" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Joint_ID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Joint_ID" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Drg_ID_1" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Drg_ID_1" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_View_Get_JointDetail_for_FitupOffers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Drg_ID_1"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Drg_ID_1' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_Category"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_Category' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_Critical_Joint"
+        ParameterType="Microsoft.LightSwitch:Boolean?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_Critical_Joint' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_View_Get_JointDetail_for_FitupOffers">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_View_Get_JointDetail_for_FitupOffer" />
+        <IsView />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_1"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Drg_ID_1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Drg_ID_2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Drg_ID_3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Drg_ID_4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Drg_ID_5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Joint_ID"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Joint_ID]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Joint_No"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Joint_No]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Part1]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Part2]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Part3]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Part4]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Part5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="WPS"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[WPS]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Weld_Process"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Weld_Process]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IMIRNO1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IMIRNO2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IMIRNO3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IMIRNO4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IMIRNO5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HeatNo1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[HeatNo1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HeatNo2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[HeatNo2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HeatNo3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[HeatNo3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HeatNo4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[HeatNo4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HeatNo5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[HeatNo5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IDNo1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IDNo2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IDNo3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IDNo4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[IDNo5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Material1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Material1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Material2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Material2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Material3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Material3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Material4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Material4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Material5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Material5]" />
+        <SsdlProperty
+          MaxLength="61"
+          Name="LenSize"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[LenSize]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="Material"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Material]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Joint_Category"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[Joint_Category]" />
+        <SsdlProperty
+          Name="flg_Critical_Joint"
+          Nullable="False"
+          Type="bit"
+          Property="sps_View_Get_JointDetail_for_FitupOffer/Properties[flg_Critical_Joint]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

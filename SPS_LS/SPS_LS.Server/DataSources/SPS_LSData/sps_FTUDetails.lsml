@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_FTUDetail">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="FTU_No_l2_FTU"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Joint_ID_l2_Joints"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Drg_ID_l2_DrgList"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Drg_ID_2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Drg_ID_3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Drg_ID_4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Drg_ID_5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RevID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DCN_No"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SizeThk"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRSrNO1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRSrNO2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRSrNO3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRSrNO4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRSrNO5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNoSAP1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNoSAP2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNoSAP3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNoSAP4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNoSAP5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNo5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MPI_No1_l2_MPI"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MPI_No2_l2_MPI"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MPI_No3_l2_MPI"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MPI_No4_l2_MPI"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MPI_No5_l2_MPI"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark_Detail"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark_Detail_QC"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deleted_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deleted_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":Int16?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReasonForDelete"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIR_ID_HeatNo_Edited_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIR_ID_HeatNo_EditedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Critical_Joint"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReasonForRejection"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReasonForRejectionDesc"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_FTU"
+        Association="FK_sps_FTUDetail_sps_FTU"
+        FromEnd="sps_FTUDetail"
+        ToEnd="sps_FTU" />
+      <EntityProperty
+        Name="imageurl"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_FTUDetails"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_FTUDetail" />
+    <QueryOperation
+      Name="sps_FTUDetails_Single"
+      ReturnType="sps_FTUDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Joint_ID_l2_Joints" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Joint_ID_l2_Joints" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="FTU_No_l2_FTU" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="FTU_No_l2_FTU" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_FTUDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="FTU_No_l2_FTU"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'FTU_No_l2_FTU' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID_l2_Joints"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID_l2_Joints' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_FTUDetails_SingleOrDefault"
+      ReturnType="sps_FTUDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Joint_ID_l2_Joints" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Joint_ID_l2_Joints" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="FTU_No_l2_FTU" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="FTU_No_l2_FTU" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_FTUDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="FTU_No_l2_FTU"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'FTU_No_l2_FTU' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID_l2_Joints"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID_l2_Joints' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_FTUDetails">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_FTUDetail" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="FTU_No_l2_FTU"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[FTU_No_l2_FTU]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Joint_ID_l2_Joints"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Joint_ID_l2_Joints]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_l2_DrgList"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Drg_ID_l2_DrgList]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Part1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Drg_ID_2]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Part2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Drg_ID_3]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Part3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Drg_ID_4]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Part4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Drg_ID_5]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Part5]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="RevID"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[RevID]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="DCN_No"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[DCN_No]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="SizeThk"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[SizeThk]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRNO1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRNO2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRNO3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRNO4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRNO5]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="IMIRSrNO1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRSrNO1]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="IMIRSrNO2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRSrNO2]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="IMIRSrNO3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRSrNO3]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="IMIRSrNO4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRSrNO4]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="IMIRSrNO5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIRSrNO5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNoSAP1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNoSAP1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNoSAP2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNoSAP2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNoSAP3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNoSAP3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNoSAP4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNoSAP4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNoSAP5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNoSAP5]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[HeatNo1]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[HeatNo2]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[HeatNo3]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[HeatNo4]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[HeatNo5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNo1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNo2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNo3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNo4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNo5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IDNo5]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="MPI_No1_l2_MPI"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[MPI_No1_l2_MPI]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="MPI_No2_l2_MPI"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[MPI_No2_l2_MPI]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="MPI_No3_l2_MPI"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[MPI_No3_l2_MPI]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="MPI_No4_l2_MPI"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[MPI_No4_l2_MPI]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="MPI_No5_l2_MPI"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[MPI_No5_l2_MPI]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Remark_Detail"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Remark_Detail]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Remark_Detail_QC"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Remark_Detail_QC]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Deleted_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[Deleted_By]" />
+        <SsdlProperty
+          Name="Deleted_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_FTUDetail/Properties[Deleted_Date]" />
+        <SsdlProperty
+          Name="Status"
+          Nullable="True"
+          Type="smallint"
+          Property="sps_FTUDetail/Properties[Status]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReasonForDelete"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[ReasonForDelete]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="IMIR_ID_HeatNo_Edited_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[IMIR_ID_HeatNo_Edited_By]" />
+        <SsdlProperty
+          Name="IMIR_ID_HeatNo_EditedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_FTUDetail/Properties[IMIR_ID_HeatNo_EditedDate]" />
+        <SsdlProperty
+          Name="flg_Critical_Joint"
+          Nullable="True"
+          Type="bit"
+          Property="sps_FTUDetail/Properties[flg_Critical_Joint]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReasonForRejection"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[ReasonForRejection]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReasonForRejectionDesc"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_FTUDetail/Properties[ReasonForRejectionDesc]" />
+        <SsdlProperty
+          Name="imageurl"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="sps_FTUDetail/Properties[imageurl]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

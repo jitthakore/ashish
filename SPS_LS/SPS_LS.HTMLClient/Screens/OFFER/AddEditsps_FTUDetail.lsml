@@ -1,0 +1,2934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.SPS_LS.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <Screen
+    Name="AddEditsps_FTUDetail">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="SPS_LSData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="Details"
+            Kind="Group"
+            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Details" />
+            </ContentItem.Attributes>
+            <ContentItem
+              Name="columns"
+              Kind="Details"
+              DataType="sps_FTUDetail"
+              View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="columns" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="AddEditsps_FTUDetail/Properties[sps_FTUDetail]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="DrgNoProperty"
+                Kind="Details"
+                DataType="sps_View_Get_DrgNo_For_FitUpOffer">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[DrgNoProperty]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_DrgNo_For_FitUpOffer"
+                  Kind="Details"
+                  DataType="sps_View_Get_DrgNo_For_FitUpOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="DisplayDrgNoForFitupOffer"
+                Kind="Collection"
+                DataType="CollectionView$sps_View_Get_DrgNo_For_FitUpOffer"
+                View="Microsoft.LightSwitch.MobileWeb:TileList">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[DisplayDrgNoForFitupOffer]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="DisplayDrgNoForFitupOfferTemplate"
+                  Kind="Details"
+                  DataType="sps_View_Get_DrgNo_For_FitUpOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Drg_ID1"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_DrgNo_For_FitUpOffer/Properties[Drg_ID]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="Small"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Rev"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_DrgNo_For_FitUpOffer/Properties[Rev]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Sheet_No"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_DrgNo_For_FitUpOffer/Properties[Sheet_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Total_Sheets"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_DrgNo_For_FitUpOffer/Properties[Total_Sheets]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_No_MFF"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_DrgNo_For_FitUpOffer/Properties[Drg_No_MFF]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="JointNoProperty"
+                Kind="Details"
+                DataType="sps_View_Get_JointNo_For_FitUpOffer">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[JointNoProperty]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_JointNo_For_FitUpOffer"
+                  Kind="Details"
+                  DataType="sps_View_Get_JointNo_For_FitUpOffer"
+                  View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Joint_No"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Joint_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_ID1"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Joint_ID]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_Category"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Joint_Category]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Length"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Length]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Thickness"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Thickness]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material2"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material3"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material4"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material5"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="WPS"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[WPS]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Weld_Process"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Weld_Process]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part2"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part3"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part4"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part5"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="DisplayJointNoForFitupOffer"
+                Kind="Collection"
+                DataType="CollectionView$sps_View_Get_JointNo_For_FitUpOffer"
+                View="Microsoft.LightSwitch.MobileWeb:TileList">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[DisplayJointNoForFitupOffer]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="DisplayJointNoForFitupOfferTemplate"
+                  Kind="Details"
+                  DataType="sps_View_Get_JointNo_For_FitUpOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Joint_No1"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Joint_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_ID"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Joint_ID]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_Category1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Joint_Category]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Length1"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Length]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Thickness1"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Thickness]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material11"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material21"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material31"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material41"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Material51"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Material5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="WPS1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[WPS]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Weld_Process1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Weld_Process]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part11"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part21"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part31"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part41"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part51"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_ID_1"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Drg_ID_1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="Small"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_ID_2"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Drg_ID_2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="Small"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_ID_3"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Drg_ID_3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <ConstantExpression
+                              Value="Small"
+                              ResultType=":String" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_ID_4"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Drg_ID_4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_ID_5"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Drg_ID_5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IMIRNO1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO2"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IMIRNO2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO3"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IMIRNO3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO4"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IMIRNO4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO5"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IMIRNO5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[HeatNo1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo2"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[HeatNo2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo3"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[HeatNo3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo4"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[HeatNo4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo5"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[HeatNo5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNo1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IDNo1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNo2"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IDNo2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNo3"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IDNo3]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNo4"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IDNo4]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNo5"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[IDNo5]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part1Thk"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part1Thk]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part2Thk"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part2Thk]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part3Thk"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part3Thk]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part4Thk"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part4Thk]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part5Thk"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part5Thk]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part1Len"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part1Len]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part2Len"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part2Len]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part3Len"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part3Len]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part4Len"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part4Len]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part5Len"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_JointNo_For_FitUpOffer/Properties[Part5Len]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="IMIRIDHeat1Property"
+                Kind="Details"
+                DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeat1Property]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item"
+                  Kind="Details"
+                  DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item"
+                  View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Drg_id_l2_drglist"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item/Properties[Drg_id_l2_drglist]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_No2"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item/Properties[Joint_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_ID"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item/Properties[Drg_ID]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item/Properties[IMIRNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNO"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item/Properties[IDNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item/Properties[HeatNo]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="IMIRIDHeat2Property"
+                Kind="Details"
+                DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer2]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeat2Property]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item"
+                  Kind="Details"
+                  DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item"
+                  View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Drg_id_l2_drglist1"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item/Properties[Drg_id_l2_drglist]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_No3"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item/Properties[Joint_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Drg_ID_21"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item/Properties[Drg_ID_2]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO6"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item/Properties[IMIRNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNO6"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item/Properties[IDNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo6"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item/Properties[HeatNo]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="IMIRIDHeat3Property"
+                Kind="Details"
+                DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer3]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeat3Property]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item"
+                  Kind="Details"
+                  DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item"
+                  View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Drg_id_l2_drglist2"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item/Properties[Drg_id_l2_drglist]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_No4"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item/Properties[Joint_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO7"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item/Properties[IMIRNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNO7"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item/Properties[IDNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo7"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item/Properties[HeatNo]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part_No_l2_Drg_BOQ"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item/Properties[Part_No_l2_Drg_BOQ]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="IMIRIDHeat4Property"
+                Kind="Details"
+                DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer4]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeat4Property]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item"
+                  Kind="Details"
+                  DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item"
+                  View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Drg_id_l2_drglist3"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item/Properties[Drg_id_l2_drglist]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_No5"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item/Properties[Joint_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO8"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item/Properties[IMIRNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNO8"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item/Properties[IDNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo8"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item/Properties[HeatNo]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part_No_l2_Drg_BOQ1"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item/Properties[Part_No_l2_Drg_BOQ]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="LeftAligned"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="IMIRIDHeat5Property"
+                Kind="Details"
+                DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer5]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[IMIRIDHeat5Property]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item"
+                  Kind="Details"
+                  DataType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item"
+                  View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Drg_id_l2_drglist4"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item/Properties[Drg_id_l2_drglist]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Joint_No6"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item/Properties[Joint_No]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IMIRNO9"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item/Properties[IMIRNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="IDNO9"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item/Properties[IDNO]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="HeatNo9"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item/Properties[HeatNo]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Part_No_l2_Drg_BOQ2"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item/Properties[Part_No_l2_Drg_BOQ]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="MPI1"
+                Kind="Details"
+                DataType="sps_View_Get_MPINo_For_FitupOffer">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPI1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_MPINo_For_FitupOffer"
+                  Kind="Details"
+                  DataType="sps_View_Get_MPINo_For_FitupOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="MPI2"
+                Kind="Details"
+                DataType="sps_View_Get_MPINo_For_FitupOffer">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer2]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPI2]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_MPINo_For_FitupOffer1"
+                  Kind="Details"
+                  DataType="sps_View_Get_MPINo_For_FitupOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="MPI3"
+                Kind="Details"
+                DataType="sps_View_Get_MPINo_For_FitupOffer">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer3]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPI3]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_MPINo_For_FitupOffer2"
+                  Kind="Details"
+                  DataType="sps_View_Get_MPINo_For_FitupOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="MPI4"
+                Kind="Details"
+                DataType="sps_View_Get_MPINo_For_FitupOffer">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer4]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPI4]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_MPINo_For_FitupOffer3"
+                  Kind="Details"
+                  DataType="sps_View_Get_MPINo_For_FitupOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="MPI5"
+                Kind="Details"
+                DataType="sps_View_Get_MPINo_For_FitupOffer">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer5]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[MPI5]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="sps_View_Get_MPINo_For_FitupOffer4"
+                  Kind="Details"
+                  DataType="sps_View_Get_MPINo_For_FitupOffer">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="Remark_Detail"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditsps_FTUDetail/Properties[sps_FTUDetail]" />
+                      <MemberExpression
+                        Member="Remark_Detail" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+        <ContentItem.PropertySources>
+          <ControlPropertySource
+            Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ScreenType]">
+            <ScreenExpressionTree>
+              <ChainExpression>
+                <ConstantExpression
+                  Value="Edit"
+                  ResultType=":String" />
+              </ChainExpression>
+            </ScreenExpressionTree>
+          </ControlPropertySource>
+        </ContentItem.PropertySources>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenProperty
+        Name="sps_FTUDetail"
+        PropertyType="sps_FTUDetail">
+        <ScreenProperty.Attributes>
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="para_ModuleID"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="JointNoProperty"
+        PropertyType="sps_View_Get_JointNo_For_FitUpOffer" />
+      <ScreenCollectionProperty
+        Name="JointNoForFitupOffer"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_JointNo_For_FitUpOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="JointNoForFitupOfferQuery"
+            ReturnType="sps_View_Get_JointNo_For_FitUpOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[JointNoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID_l2_DrgList">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="DisplayJointNoForFitupOffer"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_JointNo_For_FitUpOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="DisplayJointNoForFitupOfferQuery"
+            ReturnType="sps_View_Get_JointNo_For_FitUpOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[DisplayJointNoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[DisplayJointNoForFitupOffer]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID_l2_DrgList">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID_1" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Joint_ID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="DisplayDrgNoForFitupOffer"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_DrgNo_For_FitUpOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="DisplayDrgNoForFitupOfferQuery"
+            ReturnType="sps_View_Get_DrgNo_For_FitUpOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[DisplayDrgNoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[DisplayDrgNoForFitupOffer]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Module_ID_l2_Module" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="DrgNoForFitupOffer"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_DrgNo_For_FitUpOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="DrgNoForFitupOfferQuery"
+            ReturnType="sps_View_Get_DrgNo_For_FitUpOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[DrgNoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]/Query">
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="DrgNoProperty"
+        PropertyType="sps_View_Get_DrgNo_For_FitUpOffer" />
+      <ScreenProperty
+        Name="IMIRIDHeat1Property"
+        PropertyType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item" />
+      <ScreenCollectionProperty
+        Name="IMIRIDHeatForFitupOffer1"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="IMIRIDHeatForFitupOffer1Query"
+            ReturnType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1Item*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[IMIRIDHeatForFitupOffer1]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer1]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID_1" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Drg_id_l2_drglist">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Joint_No">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part1" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="IMIRIDHeat2Property"
+        PropertyType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item" />
+      <ScreenCollectionProperty
+        Name="IMIRIDHeatForFitupOffer2"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="IMIRIDHeatForFitupOffer2Query"
+            ReturnType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2Item*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[IMIRIDHeatForFitupOffer2]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer2]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID_2">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID_2" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Drg_id_l2_drglist">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Joint_No">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part2" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="IMIRIDHeat3Property"
+        PropertyType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item" />
+      <ScreenCollectionProperty
+        Name="IMIRIDHeatForFitupOffer3"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="IMIRIDHeatForFitupOffer3Query"
+            ReturnType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3Item*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[IMIRIDHeatForFitupOffer3]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer3]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID_3">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID_3" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Drg_id_l2_drglist">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Joint_No">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part3" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="IMIRNO">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ProjectName]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="para_ProjectName"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="IMIRIDHeat4Property"
+        PropertyType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item" />
+      <ScreenCollectionProperty
+        Name="IMIRIDHeatForFitupOffer4"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="IMIRIDHeatForFitupOffer4Query"
+            ReturnType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4Item*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[IMIRIDHeatForFitupOffer4]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer4]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID_4">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID_4" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Drg_id_l2_drglist">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Joint_No">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part4" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="IMIRIDHeat5Property"
+        PropertyType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item" />
+      <ScreenCollectionProperty
+        Name="IMIRIDHeatForFitupOffer5"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="IMIRIDHeatForFitupOffer5Query"
+            ReturnType="sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5Item*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[IMIRIDHeatForFitupOffer5]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[IMIRIDHeatForFitupOffer5]/Query">
+              <ArgumentExpression
+                Parameter="Drg_ID_5">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID_5" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Drg_id_l2_drglist">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Joint_No">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part5" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="MPINoForFitupOffer"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_MPINo_For_FitupOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="MPINoForFitupOfferQuery"
+            ReturnType="sps_View_Get_MPINo_For_FitupOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[MPINoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer]/Query">
+              <ArgumentExpression
+                Parameter="DrgIDFromDrawing">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part1" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="joint_no">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="MPI1"
+        PropertyType="sps_View_Get_MPINo_For_FitupOffer" />
+      <ScreenCollectionProperty
+        Name="MPINoForFitupOffer2"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_MPINo_For_FitupOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="MPINoForFitupOffer2Query"
+            ReturnType="sps_View_Get_MPINo_For_FitupOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[MPINoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer2]/Query">
+              <ArgumentExpression
+                Parameter="DrgIDFromDrawing">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part2" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="joint_no">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="MPINoForFitupOffer3"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_MPINo_For_FitupOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="MPINoForFitupOffer3Query"
+            ReturnType="sps_View_Get_MPINo_For_FitupOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[MPINoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer3]/Query">
+              <ArgumentExpression
+                Parameter="DrgIDFromDrawing">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part3" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="joint_no">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="MPINoForFitupOffer4"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_MPINo_For_FitupOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="MPINoForFitupOffer4Query"
+            ReturnType="sps_View_Get_MPINo_For_FitupOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[MPINoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer4]/Query">
+              <ArgumentExpression
+                Parameter="DrgIDFromDrawing">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part4" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="joint_no">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="MPINoForFitupOffer5"
+        PageSize="45"
+        PropertyType="CollectionView$sps_View_Get_MPINo_For_FitupOffer">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="MPINoForFitupOffer5Query"
+            ReturnType="sps_View_Get_MPINo_For_FitupOffer*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="SPS_LSData/Members[MPINoForFitupOffer]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditsps_FTUDetail/Properties[MPINoForFitupOffer5]/Query">
+              <ArgumentExpression
+                Parameter="DrgIDFromDrawing">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[DrgNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Drg_ID" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Module_ID_l2_Module">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[para_ModuleID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Part_No_l2_Drg_BOQ">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Part5" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="joint_no">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditsps_FTUDetail/Properties[JointNoForFitupOffer]" />
+                  <MemberExpression
+                    Member="selectedItem" />
+                  <MemberExpression
+                    Member="Joint_No" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="MPI2"
+        PropertyType="sps_View_Get_MPINo_For_FitupOffer" />
+      <ScreenProperty
+        Name="MPI3"
+        PropertyType="sps_View_Get_MPINo_For_FitupOffer" />
+      <ScreenProperty
+        Name="MPI4"
+        PropertyType="sps_View_Get_MPINo_For_FitupOffer" />
+      <ScreenProperty
+        Name="MPI5"
+        PropertyType="sps_View_Get_MPINo_For_FitupOffer" />
+    </Screen.Properties>
+  </Screen>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="showAddEditsps_FTUDetail">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="AddEditsps_FTUDetail" />
+      </ApplicationMethod.Attributes>
+      <ApplicationMethodParameter
+        Name="sps_FTUDetail"
+        ParameterType="sps_FTUDetail" />
+      <ApplicationMethodParameter
+        Name="para_ModuleID"
+        ParameterType=":String" />
+      <ApplicationMethodParameter
+        Name="para_ProjectName"
+        ParameterType=":String" />
+    </ApplicationMethod>
+  </Application.Methods>
+</Application>

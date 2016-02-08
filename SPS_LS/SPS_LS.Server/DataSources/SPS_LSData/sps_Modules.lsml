@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_Module">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Module_ID"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Module_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Module_Desc"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="XNO_Def"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="XNO_Seq"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Active"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_Agency"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DrgIssueNo"
+        PropertyType=":Int16?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Module_Yard_location"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Part2_NonMandatory"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sap_Module_ID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_Contractor_Modules"
+        Association="FK_sps_Contractor_Module_sps_Module"
+        FromEnd="sps_Module"
+        ToEnd="sps_Contractor_Module" />
+      <NavigationProperty
+        Name="sps_DrgLists"
+        Association="FK_sps_DrgList_sps_Module"
+        FromEnd="sps_Module"
+        ToEnd="sps_DrgList" />
+      <NavigationProperty
+        Name="sps_Project"
+        Association="FK_sps_Module_sps_Project"
+        FromEnd="sps_Module"
+        ToEnd="sps_Project" />
+      <NavigationProperty
+        Name="sps_PWHTs"
+        Association="FK_sps_PWHT_sps_Module"
+        FromEnd="sps_Module"
+        ToEnd="sps_PWHT" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_sps_Contractor_Module_sps_Module">
+    <AssociationEnd
+      Name="sps_Module"
+      Multiplicity="One"
+      EntityType="sps_Module">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_Contractor_Module"
+      Multiplicity="Many"
+      EntityType="sps_Contractor_Module" />
+  </Association>
+  <Association
+    Name="FK_sps_DrgList_sps_Module">
+    <AssociationEnd
+      Name="sps_Module"
+      Multiplicity="One"
+      EntityType="sps_Module">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_DrgList"
+      Multiplicity="Many"
+      EntityType="sps_DrgList" />
+  </Association>
+  <Association
+    Name="FK_sps_PWHT_sps_Module">
+    <AssociationEnd
+      Name="sps_Module"
+      EntityType="sps_Module">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_PWHT"
+      Multiplicity="Many"
+      EntityType="sps_PWHT" />
+  </Association>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_Modules"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_Module" />
+    <AssociationSet
+      Name="FK_sps_Contractor_Module_sps_Module"
+      Association="FK_sps_Contractor_Module_sps_Module">
+      <AssociationSetEnd
+        Name="sps_Module"
+        EntitySet="sps_Modules" />
+      <AssociationSetEnd
+        Name="sps_Contractor_Module"
+        EntitySet="sps_Contractor_Modules" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_sps_DrgList_sps_Module"
+      Association="FK_sps_DrgList_sps_Module">
+      <AssociationSetEnd
+        Name="sps_Module"
+        EntitySet="sps_Modules" />
+      <AssociationSetEnd
+        Name="sps_DrgList"
+        EntitySet="sps_DrgLists" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_sps_PWHT_sps_Module"
+      Association="FK_sps_PWHT_sps_Module">
+      <AssociationSetEnd
+        Name="sps_Module"
+        EntitySet="sps_Modules" />
+      <AssociationSetEnd
+        Name="sps_PWHT"
+        EntitySet="sps_PWHTs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="sps_Modules_Single"
+      ReturnType="sps_Module">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Module_ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Module_ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Modules" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Module_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Module_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_Modules_SingleOrDefault"
+      ReturnType="sps_Module">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Module_ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Module_ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Modules" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Module_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Module_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_Modules">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_Module" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Module_ID"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_Module/Properties[Module_ID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Module_Name"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Module/Properties[Module_Name]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Module_Desc"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Module/Properties[Module_Desc]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="XNO_Def"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Module/Properties[XNO_Def]" />
+        <SsdlProperty
+          Name="XNO_Seq"
+          Nullable="True"
+          Type="bigint"
+          Property="sps_Module/Properties[XNO_Seq]" />
+        <SsdlProperty
+          Name="Active"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Module/Properties[Active]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Insp_Agency"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Module/Properties[Insp_Agency]" />
+        <SsdlProperty
+          Name="DrgIssueNo"
+          Nullable="True"
+          Type="smallint"
+          Property="sps_Module/Properties[DrgIssueNo]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Module_Yard_location"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Module/Properties[Module_Yard_location]" />
+        <SsdlProperty
+          Name="flg_Part2_NonMandatory"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Module/Properties[flg_Part2_NonMandatory]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="sap_Module_ID"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Module/Properties[sap_Module_ID]" />
+        <SsdlForeignKeyProperty
+          MaxLength="30"
+          Name="Project_ID_l2_Project"
+          Nullable="False"
+          Type="varchar"
+          PropertyName="Project_ID_l2_Project" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_Contractor_Module_sps_Module">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_Contractor_Module_sps_Module" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_Contractor_Module_sps_Module]/Members[sps_Module]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Module_ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_Contractor_Module_sps_Module]/Members[sps_Contractor_Module]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Module_ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_DrgList_sps_Module">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_DrgList_sps_Module" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_DrgList_sps_Module]/Members[sps_Module]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Module_ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_DrgList_sps_Module]/Members[sps_DrgList]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Module_ID_l2_Module" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_PWHT_sps_Module">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_PWHT_sps_Module" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_PWHT_sps_Module]/Members[sps_Module]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Module_ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_PWHT_sps_Module]/Members[sps_PWHT]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Module_ID_l2_Module" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' != 'Release' ">
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{c7c568a5-1693-4cd4-a67c-b40f48155c00}</ProjectGuid>
+    <LightSwitchVersion>v5.0</LightSwitchVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <PropertyGroup>
+    <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion-->
+    <LightSwitchProjectTypeV45>Client</LightSwitchProjectTypeV45>
+    <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
+    <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{262852c6-cd72-467d-83fe-5eeb1973a190}</ProjectTypeGuids>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <DefaultPlatform>AnyCPU</DefaultPlatform>
+    <ClientProjectName>HTMLClient</ClientProjectName>
+    <ServerProjectReference>..\SPS_LS.Server\SPS_LS.Server.csproj</ServerProjectReference>
+    <LightSwitchDisplayName>HTMLClient</LightSwitchDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\dark-theme-2.5.3.css" />
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\icons-18-black.png" />
+    <Content Include="Content\Images\icons-18-white.png" />
+    <Content Include="Content\Images\icons-36-black.png" />
+    <Content Include="Content\Images\icons-36-white.png" />
+    <Content Include="Content\Images\msls-black-icons-18.png" />
+    <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-loader-dark.gif" />
+    <Content Include="Content\Images\msls-loader-light.gif" />
+    <Content Include="Content\Images\msls-white-icons-18.png" />
+    <Content Include="Content\Images\msls-white-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
+    <Content Include="Content\jquery.mobile-1.3.0.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
+    <Content Include="Content\light-theme-2.5.3.css" />
+    <Content Include="Content\msls-2.5.3.css" />
+    <Content Include="Content\msls-2.5.3.min.css" />
+    <Content Include="Content\msls-dark-2.5.3.css" />
+    <Content Include="Content\msls-light-2.5.3.css" />
+    <Content Include="default.htm" />
+    <Content Include="Content\user-customization.css" />
+    <Content Include="Content\Images\user-logo.png" />
+    <Content Include="Content\Images\user-logo.ico" />
+    <Content Include="Content\Images\user-logo-144.png" />
+    <Content Include="Content\Images\user-splash-screen.png" />
+    <Content Include="Content\Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Screens\Browsesps_Projects.lsml.js">
+      <DependentUpon>Browsesps_Projects.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Menu.lsml.js">
+      <DependentUpon>Menu.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OFFER\AddEditsps_FTU.lsml.js">
+      <DependentUpon>AddEditsps_FTU.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OFFER\AddEditsps_FTUDetail.lsml.js">
+      <DependentUpon>AddEditsps_FTUDetail.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OFFER\AddEditsps_MPI.lsml.js">
+      <DependentUpon>AddEditsps_MPI.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OFFER\AddEditsps_MPI_Detail_Off.lsml.js">
+      <DependentUpon>AddEditsps_MPI_Detail_Off.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\datajs-1.1.3.js" />
+    <Content Include="Scripts\datajs-1.1.3.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.min.js" />
+    <Content Include="Scripts\msls.js" />
+    <Content Include="Scripts\msls-2.5.3-vsdoc.js" />
+    <Content Include="Scripts\msls-2.5.3.js" />
+    <Content Include="Scripts\msls-2.5.3.min.js" />
+    <Content Include="Scripts\winjs-1.0.js" />
+    <Content Include="Scripts\winjs-1.0.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceMetadataReference Include="..\SPS_LS.Server\SPS_LS.Server.csproj">
+      <Visible>false</Visible>
+    </ServiceMetadataReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Client.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\GET_CONTRACTORs.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_Contractors.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_DrgLists.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_Locations.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_Modules.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_Projects.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_View_Get_Drg_No_For_PWHTs.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_View_Get_Drg_No_For_WVFs.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_View_Get_FTUDetail_For_Offers.lsml" />
+    <LightSwitchModel Include="Properties\SPS_LSData\sps_View_Get_Joint_No_For_WVFs.lsml" />
+    <LightSwitchModel Include="Screens\Browsesps_Projects.lsml" />
+    <LightSwitchModel Include="Screens\buffer\AddEditsps_NDEReq1.lsml" />
+    <LightSwitchModel Include="Screens\buffer\AddEdit_NDEReq2.lsml" />
+    <LightSwitchModel Include="Screens\Delete\AddEditsps_WVF1.lsml" />
+    <LightSwitchModel Include="Screens\Delete\WVFDelete.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\WVFInspect1.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\Inspect_FITUP1.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\AddEdit_Hardness_Report.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\Inspect_MI1.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\Inspect_PWHT1.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\Inspect_FITUP2.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\Inspect_MI2.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\Inspect_PWHT2.lsml" />
+    <LightSwitchModel Include="Screens\Inspect\Inspect_WVF2.lsml" />
+    <LightSwitchModel Include="Screens\Menu.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_FTU.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_FTUDetail.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_MPI.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_MPI_Detail_Off.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_NDEReq.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_PWHT.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_PWHTDetail.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_WVF.lsml" />
+    <LightSwitchModel Include="Screens\OFFER\AddEditsps_WVFDetail.lsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ClientBuildFile Include="GeneratedArtifacts\model.json">
+      <SubFolder>Content\Resources\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\data.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\viewModel.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\usercode.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <!-- Redefine the targets to be empty -->
+  <Target Name="GetXapOutputFile" />
+  <PropertyGroup>
+    <AppxPackage>false</AppxPackage>
+    <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

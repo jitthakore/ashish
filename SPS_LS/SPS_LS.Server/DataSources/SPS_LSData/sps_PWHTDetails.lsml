@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_PWHTDetail">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="PWHT_No_l2_PWHT"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Joint_ID_l2_Joints"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Drg_ID_l2_DrgList"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RevID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_Agency"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Heat_Treatment"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HT_Processes"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Furnance_Loaded"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Loading_Temp"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Soaking_Temp"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Soaking_Peroid"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rate_Of_Heating"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Soaking_Temp_From"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Soaking_Temp_To"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Soaking_Time_Hr"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Soaking_Time_Min"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rate_Of_Cooling"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Unloading_Temp"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deleted_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deleted_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReasonForDelete"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark_Off_Det"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark_QA_Det"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":Int16?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="New_ReportNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Old_ReportNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_PWHT"
+        Association="FK_sps_PWHTDetail_sps_PWHT"
+        FromEnd="sps_PWHTDetail"
+        ToEnd="sps_PWHT" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_PWHTDetails"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_PWHTDetail" />
+    <QueryOperation
+      Name="sps_PWHTDetails_Single"
+      ReturnType="sps_PWHTDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Joint_ID_l2_Joints" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Joint_ID_l2_Joints" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="PWHT_No_l2_PWHT" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="PWHT_No_l2_PWHT" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_PWHTDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PWHT_No_l2_PWHT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PWHT_No_l2_PWHT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID_l2_Joints"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID_l2_Joints' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_PWHTDetails_SingleOrDefault"
+      ReturnType="sps_PWHTDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Joint_ID_l2_Joints" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Joint_ID_l2_Joints" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="PWHT_No_l2_PWHT" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="PWHT_No_l2_PWHT" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_PWHTDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PWHT_No_l2_PWHT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PWHT_No_l2_PWHT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID_l2_Joints"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID_l2_Joints' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_PWHTDetails">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_PWHTDetail" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="PWHT_No_l2_PWHT"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[PWHT_No_l2_PWHT]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Joint_ID_l2_Joints"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Joint_ID_l2_Joints]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_l2_DrgList"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Drg_ID_l2_DrgList]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="RevID"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[RevID]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Insp_Agency"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Insp_Agency]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Heat_Treatment"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Heat_Treatment]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="HT_Processes"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[HT_Processes]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Furnance_Loaded"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Furnance_Loaded]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Loading_Temp"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Loading_Temp]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Soaking_Temp"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Soaking_Temp]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Soaking_Peroid"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Soaking_Peroid]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Rate_Of_Heating"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Rate_Of_Heating]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Soaking_Temp_From"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Soaking_Temp_From]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Soaking_Temp_To"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Soaking_Temp_To]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Soaking_Time_Hr"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Soaking_Time_Hr]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Soaking_Time_Min"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Soaking_Time_Min]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Rate_Of_Cooling"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Rate_Of_Cooling]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Unloading_Temp"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Unloading_Temp]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Deleted_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Deleted_By]" />
+        <SsdlProperty
+          Name="Deleted_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_PWHTDetail/Properties[Deleted_Date]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="ReasonForDelete"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[ReasonForDelete]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Remark_Off_Det"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Remark_Off_Det]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Remark_QA_Det"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Remark_QA_Det]" />
+        <SsdlProperty
+          Name="Status"
+          Nullable="True"
+          Type="smallint"
+          Property="sps_PWHTDetail/Properties[Status]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="New_ReportNo"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[New_ReportNo]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Old_ReportNo"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_PWHTDetail/Properties[Old_ReportNo]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_Project">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Plant"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="Project_ID"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Project_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Project_Desc"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Client"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Start_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="End_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_Agency"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Print_Drawing"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Active"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QCP_No"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QCP_Stage_No"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RMI_Seq"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TPI"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CA"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AI"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PMC_CLIENT"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Agency_Type1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Agency_Type2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Agency_Type3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Rep_No_With_Module"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Parent_WONo"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Drg_Prn_DrgNo"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Drg_Prn_SheetNo"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Drg_Prn_RevNo"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_AutoBuffer_for_WEL_Dissable"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_IMIRIDNO_With_Qty_Split"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Ignore_Welder_In_Cover"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Tubular_Mandatory"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_PlateNo_In_MCR"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Hardness_Required_After_Repair"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Drg_Prn_DrgNo_Client"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Drg_Prn_DrgNo_PMT"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Automatic_NDE_Req_Offer"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="flg_Rep_No_With_Module_In_Det_col"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_Modules"
+        Association="FK_sps_Module_sps_Project"
+        FromEnd="sps_Project"
+        ToEnd="sps_Module" />
+      <NavigationProperty
+        Name="sps_User_Projects"
+        Association="FK_sps_User_Project_sps_Project"
+        FromEnd="sps_Project"
+        ToEnd="sps_User_Project" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_sps_Module_sps_Project">
+    <AssociationEnd
+      Name="sps_Project"
+      Multiplicity="One"
+      EntityType="sps_Project">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_Module"
+      Multiplicity="Many"
+      EntityType="sps_Module" />
+  </Association>
+  <Association
+    Name="FK_sps_User_Project_sps_Project">
+    <AssociationEnd
+      Name="sps_Project"
+      Multiplicity="One"
+      EntityType="sps_Project">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_User_Project"
+      Multiplicity="Many"
+      EntityType="sps_User_Project" />
+  </Association>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_Projects"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_Project" />
+    <AssociationSet
+      Name="FK_sps_Module_sps_Project"
+      Association="FK_sps_Module_sps_Project">
+      <AssociationSetEnd
+        Name="sps_Project"
+        EntitySet="sps_Projects" />
+      <AssociationSetEnd
+        Name="sps_Module"
+        EntitySet="sps_Modules" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_sps_User_Project_sps_Project"
+      Association="FK_sps_User_Project_sps_Project">
+      <AssociationSetEnd
+        Name="sps_Project"
+        EntitySet="sps_Projects" />
+      <AssociationSetEnd
+        Name="sps_User_Project"
+        EntitySet="sps_User_Projects" />
+    </AssociationSet>
+    <QueryOperation
+      Name="sps_Projects_Single"
+      ReturnType="sps_Project">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Project_ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Project_ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Projects" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Project_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Project_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_Projects_SingleOrDefault"
+      ReturnType="sps_Project">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Project_ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Project_ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Projects" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Project_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Project_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_Projects">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_Project" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Plant"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Plant]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Project_ID"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_Project/Properties[Project_ID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Project_Name"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Project_Name]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Project_Desc"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Project_Desc]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Client"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Client]" />
+        <SsdlProperty
+          Name="Start_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_Project/Properties[Start_Date]" />
+        <SsdlProperty
+          Name="End_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_Project/Properties[End_Date]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="Insp_Agency"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Insp_Agency]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Print_Drawing"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Print_Drawing]" />
+        <SsdlProperty
+          Name="Active"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[Active]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="QCP_No"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[QCP_No]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="QCP_Stage_No"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[QCP_Stage_No]" />
+        <SsdlProperty
+          Name="RMI_Seq"
+          Nullable="True"
+          Type="numeric"
+          Property="sps_Project/Properties[RMI_Seq]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="TPI"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[TPI]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="CA"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[CA]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="AI"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[AI]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="PMC_CLIENT"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[PMC_CLIENT]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Agency_Type1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Agency_Type1]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Agency_Type2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Agency_Type2]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Agency_Type3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Project/Properties[Agency_Type3]" />
+        <SsdlProperty
+          Name="flg_Rep_No_With_Module"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Rep_No_With_Module]" />
+        <SsdlProperty
+          Name="flg_Parent_WONo"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Parent_WONo]" />
+        <SsdlProperty
+          Name="flg_Drg_Prn_DrgNo"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Drg_Prn_DrgNo]" />
+        <SsdlProperty
+          Name="flg_Drg_Prn_SheetNo"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Drg_Prn_SheetNo]" />
+        <SsdlProperty
+          Name="flg_Drg_Prn_RevNo"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Drg_Prn_RevNo]" />
+        <SsdlProperty
+          Name="flg_AutoBuffer_for_WEL_Dissable"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_AutoBuffer_for_WEL_Dissable]" />
+        <SsdlProperty
+          Name="flg_IMIRIDNO_With_Qty_Split"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_IMIRIDNO_With_Qty_Split]" />
+        <SsdlProperty
+          Name="flg_Ignore_Welder_In_Cover"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Ignore_Welder_In_Cover]" />
+        <SsdlProperty
+          Name="flg_Tubular_Mandatory"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Tubular_Mandatory]" />
+        <SsdlProperty
+          Name="flg_PlateNo_In_MCR"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_PlateNo_In_MCR]" />
+        <SsdlProperty
+          Name="flg_Hardness_Required_After_Repair"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Hardness_Required_After_Repair]" />
+        <SsdlProperty
+          Name="flg_Drg_Prn_DrgNo_Client"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Drg_Prn_DrgNo_Client]" />
+        <SsdlProperty
+          Name="flg_Drg_Prn_DrgNo_PMT"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Drg_Prn_DrgNo_PMT]" />
+        <SsdlProperty
+          Name="flg_Automatic_NDE_Req_Offer"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Automatic_NDE_Req_Offer]" />
+        <SsdlProperty
+          Name="flg_Rep_No_With_Module_In_Det_col"
+          Nullable="True"
+          Type="bit"
+          Property="sps_Project/Properties[flg_Rep_No_With_Module_In_Det_col]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_Module_sps_Project">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_Module_sps_Project" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_Module_sps_Project]/Members[sps_Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Project_ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_Module_sps_Project]/Members[sps_Module]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Project_ID_l2_Project" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_User_Project_sps_Project">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_User_Project_sps_Project" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_User_Project_sps_Project]/Members[sps_Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Project_ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_User_Project_sps_Project]/Members[sps_User_Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Project_ID_Project" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

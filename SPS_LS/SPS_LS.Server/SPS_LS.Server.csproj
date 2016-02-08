@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{349c5851-65df-11da-9384-00065b846f21};{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{C8D207E7-2DC9-4207-A4D3-62198F5D9794}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LightSwitchApplication</RootNamespace>
+    <AssemblyName>Application.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <LightSwitchVersion>v5.0</LightSwitchVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <FileAlignment>512</FileAlignment>
+    <IgnoreDeployManagedRuntimeVersion>True</IgnoreDeployManagedRuntimeVersion>
+    <UseDeclareParametersXMLInMsDeploy>False</UseDeclareParametersXMLInMsDeploy>
+    <LightSwitchDisplayName>Server</LightSwitchDisplayName>
+    <LightSwitchProjectTypeV45>Server</LightSwitchProjectTypeV45>
+    <MicrosoftSdkDir Condition=" '$(MicrosoftSdkDir)' == '' ">$([System.IO.Path]::Combine($(MSBuildProgramFiles32), 'Microsoft SDKs'))</MicrosoftSdkDir>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' == '' ">$([System.IO.Path]::Combine($(MicrosoftSdkDir), 'LightSwitch', $(LightSwitchVersion)))</LightSwitchSDKPath>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' != '' and !HasTrailingSlash('$(LightSwitchSDKPath)')">$(LightSwitchSDKPath)\</LightSwitchSDKPath>
+    <NuGetPackagesFolder Condition=" '$(NuGetPackagesFolder)' == '' And Exists('..\Packages')">..\Packages\</NuGetPackagesFolder>
+    <NuGetPackagesFolder Condition=" '$(NuGetPackagesFolder)' == '' And Exists('..\..\Packages')">..\..\Packages\</NuGetPackagesFolder>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>false</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBConn, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DBConn.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Extensions.Server">
+      <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Core">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Web">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.AppBridge">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.AppBridge.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ExportProvider, Version=10.0.14.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.ExportProvider.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.CodeMarker, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.CodeMarker.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ManifestService">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.ManifestService.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Model.Xaml">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Model.Xaml.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server.Host">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.Host.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.PollingDuplex">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.ServiceModel.PollingDuplex.dll</HintPath>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>$(NuGetPackagesFolder)\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting.OData">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Server">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\UserInfoController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Service.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Contractors.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Contractor_Modules.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_DrgLists.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_FTUs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_FTUDetails.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Hardnesses.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_HardnessDetails.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_MCRs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_MCR_Details.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Modules.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_MPIs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_MPI_Detail_Insps.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_MPI_Detail_Offs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_NDEReqs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_NDEReqDets.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Projects.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_PWHTs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_RR_WVFs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_RR_WVFDetails.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_User_Projects.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_WVFs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_WVFDetails.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\SPS_LSData.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\ModuleProjectQuery.lsml">
+      <DependentUpon>sps_Modules.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Locations.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\ContractorForSelectedModule.lsml">
+      <DependentUpon>sps_Contractor_Modules.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_CONTRACTORs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\ContractorModuleQuery.lsml">
+      <DependentUpon>GET_CONTRACTORs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\LocationProjectQuery.lsml">
+      <DependentUpon>sps_Locations.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Project_Drgs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\DrgFromModule.lsml">
+      <DependentUpon>sps_DrgLists.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_HeatNo_From_IMIRIDs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_IDNO_From_IMIRIDs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_Part_No_for_MI_Offers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_Drg_No_For_PWHTs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_DrgNo_For_FitUpOffers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\PartNoFromDrgIDForMIOffer.lsml">
+      <DependentUpon>sps_View_Get_Part_No_for_MI_Offers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\DisplayPartNoForMIOfferNew.lsml">
+      <DependentUpon>sps_View_Get_Part_No_for_MI_Offers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\DrgNoForFitupOffer.lsml">
+      <DependentUpon>sps_View_Get_DrgNo_For_FitUpOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_JointNo_For_FitUpOffers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\JointNoForFitupOffer.lsml">
+      <DependentUpon>sps_View_Get_JointNo_For_FitUpOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\DisplayDrgNoForFitupOffer.lsml">
+      <DependentUpon>sps_View_Get_DrgNo_For_FitUpOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\DisplayJointNoForFitupOffer.lsml">
+      <DependentUpon>sps_View_Get_JointNo_For_FitUpOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_JointDetail_for_FitupOffers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\JointDetailForFitupOffer.lsml">
+      <DependentUpon>sps_View_Get_JointDetail_for_FitupOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_FTUDetail_For_Offers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\FTUDetailForFitupOffer.lsml">
+      <DependentUpon>sps_View_Get_FTUDetail_For_Offers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_get_DrgNOMFF_For_FitupOffers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\DrgNoMFFForFitupOffer.lsml">
+      <DependentUpon>sps_View_get_DrgNOMFF_For_FitupOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_view_getDrgNo_for_ndeOffers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\DrgNoForNdeOffer.lsml">
+      <DependentUpon>sps_view_getDrgNo_for_ndeOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_PWHTDetails.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\DrgNoForPWHT.lsml">
+      <DependentUpon>sps_View_Get_Drg_No_For_PWHTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\JointNoForPWHTOffer.lsml">
+      <DependentUpon>sps_View_Get_Drg_No_For_PWHTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_Drg_No_For_WVFs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\DrgNoForWVFOffer.lsml">
+      <DependentUpon>sps_View_Get_Drg_No_For_WVFs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\IMIRIDHeatForFitupOffer1.lsml">
+      <DependentUpon>sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI1.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\IMIRIDHeatForFitupOffer2.lsml">
+      <DependentUpon>sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI2.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\IMIRIDHeatForFitupOffer3.lsml">
+      <DependentUpon>sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI3.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\IMIRIDHeatForFitupOffer4.lsml">
+      <DependentUpon>sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI4.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\IMIRIDHeatForFitupOffer5.lsml">
+      <DependentUpon>sps_View_Get_IMIRNo_IDNo_HEatNo_for_Ftu_Offer_From_MI5.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_Joint_No_For_WVFs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_Welder_For_WVFs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\JointNoForWVFOffer.lsml">
+      <DependentUpon>sps_View_Get_Joint_No_For_WVFs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\WelderForWVFOffer.lsml">
+      <DependentUpon>sps_View_Get_Welder_For_WVFs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_MPINo_For_FitupOffers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\MPINoForFitupOffer.lsml">
+      <DependentUpon>sps_View_Get_MPINo_For_FitupOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Query1.lsml">
+      <DependentUpon>sps_View_Get_MPINo_For_FitupOffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_WVFListForDeletes.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\GetWVFForDelete.lsml">
+      <DependentUpon>sps_View_Get_WVFListForDeletes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_WVF_For_Deletes.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\WVFForDelete.lsml">
+      <DependentUpon>sps_View_Get_WVF_For_Deletes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_INSPECT_For_WVFs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\Inspect_WVF_Query.lsml">
+      <DependentUpon>GET_INSPECT_For_WVFs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Inspect_WVF_Details.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\INspect_WVF_Detail_Query.lsml">
+      <DependentUpon>Inspect_WVF_Details.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_MPI_INSPECTs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\Display_Inspect_MPI.lsml">
+      <DependentUpon>GET_MPI_INSPECTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_QC_INSPECT_MPIs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\Inspect_MIquery.lsml">
+      <DependentUpon>GET_MPI_INSPECTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_INSPECT_MPI_AFTERaccepts.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\InspectMPIQuery.lsml">
+      <DependentUpon>GET_INSPECT_MPI_AFTERaccepts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\QC_Inspect_MPT_Query.lsml">
+      <DependentUpon>GET_QC_INSPECT_MPIs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Display_Inpect_MPI_Query.lsml">
+      <DependentUpon>GET_QC_INSPECT_MPIs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\FITUP_ACCEPT_MAINs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\Get_FTU_For_inspect_closeds.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_PWHT_INSPECT_ACCEPTs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_PWHT_INSPECTQuery.lsml">
+      <DependentUpon>GET_PWHT_INSPECT_ACCEPTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Display_Inspect_PWHT.lsml">
+      <DependentUpon>GET_PWHT_INSPECT_ACCEPTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\GET_PWHT_JOINT_ACCEPTs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\INSPECT_PWHT_detail_query.lsml">
+      <DependentUpon>GET_PWHT_JOINT_ACCEPTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Inspect_PWHT_query.lsml">
+      <DependentUpon>GET_PWHT_JOINT_ACCEPTs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Display_Inspect_FITUP.lsml">
+      <DependentUpon>FITUP_ACCEPT_MAINs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\displayFITUP_QUERY.lsml">
+      <DependentUpon>Get_FTU_For_inspect_closeds.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Inspect_ftu_query.lsml">
+      <DependentUpon>Get_FTU_For_inspect_closeds.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\Hardness_offer_gets.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\Inspect_hardness_query.lsml">
+      <DependentUpon>Hardness_offer_gets.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\hardness_query.lsml">
+      <DependentUpon>Hardness_offer_gets.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Master_Proceduers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\ProcedureQuery.lsml">
+      <DependentUpon>sps_Master_Proceduers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_Matser_CodeOfConstructions.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\CodeOfConstructionQuery.lsml">
+      <DependentUpon>sps_Matser_CodeOfConstructions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_Drg_No_For_NDEs.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\get_drg_query.lsml">
+      <DependentUpon>sps_View_Get_Drg_No_For_NDEs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_NDE_Buff_Det_for_Creates.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\NDE_query.lsml">
+      <DependentUpon>sps_View_Get_NDE_Buff_Det_for_Creates.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\jointQuery.lsml">
+      <DependentUpon>sps_View_Get_NDE_Buff_Det_for_Creates.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\FILTERjointQUERY.lsml">
+      <DependentUpon>sps_View_Get_NDE_Buff_Det_for_Creates.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\SPS_LSData\sps_View_Get_Joint_Details_For_NDEBuffers.lsml" />
+    <LightSwitchModel Include="DataSources\SPS_LSData\Query2.lsml">
+      <DependentUpon>sps_View_Get_Joint_Details_For_NDEBuffers.lsml</DependentUpon>
+    </LightSwitchModel>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="packages.config" />
+    <_ServerFile Include="default.aspx" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63684/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{8BB0C5E8-0616-4F60-8E55-A43933E57E9C}" Configuration="Debug|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+      <FlavorProperties GUID="{8BB0C5E8-0616-4F60-8E55-A43933E57E9C}" Configuration="Release|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

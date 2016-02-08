@@ -1,0 +1,1115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_View_Get_Joint_Details_For_NDEBuffer">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="DrgNo"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Joint_ID"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Module_ID"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Joint_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="WVF_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Insp_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="flg_RT"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="1" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="flg_UT"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="1" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="flg_MT"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="1" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="flg_PT"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="1" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="flg_PA_UT"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="1" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="flg_TOFD_UT"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="1" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RT_Per"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UT_Per"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MT_Per"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PT_Per"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PA_UT_Per"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TOFD_UT_Per"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="3" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status_RT"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status_UT"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status_MT"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status_PT"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status_PA_UT"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status_TOFD_UT"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DefLength"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Desg"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Stage"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReqFor"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_View_Get_Joint_Details_For_NDEBuffers"
+      EntityType="sps_View_Get_Joint_Details_For_NDEBuffer" />
+    <QueryOperation
+      Name="sps_View_Get_Joint_Details_For_NDEBuffers_Single"
+      ReturnType="sps_View_Get_Joint_Details_For_NDEBuffer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="And">
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="And">
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="And">
+                                        <BinaryExpression.Left>
+                                          <BinaryExpression
+                                            NodeType="And">
+                                            <BinaryExpression.Left>
+                                              <BinaryExpression
+                                                NodeType="And">
+                                                <BinaryExpression.Left>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="flg_TOFD_UT" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="flg_TOFD_UT" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="flg_PA_UT" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="flg_PA_UT" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="flg_PT" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="flg_PT" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="flg_MT" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="flg_MT" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="Equal">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="flg_UT" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ParameterExpression
+                                            Parameter="flg_UT" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="Equal">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="flg_RT" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="flg_RT" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="Equal">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="WVF_No" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="WVF_No" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Joint_No" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Joint_No" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Module_ID" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Module_ID" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Joint_ID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Joint_ID" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="DrgNo" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="DrgNo" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_View_Get_Joint_Details_For_NDEBuffers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="DrgNo"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'DrgNo' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Module_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Module_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="WVF_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'WVF_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_RT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_RT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_UT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_UT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_MT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_MT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_PT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_PT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_PA_UT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_PA_UT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_TOFD_UT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_TOFD_UT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_View_Get_Joint_Details_For_NDEBuffers_SingleOrDefault"
+      ReturnType="sps_View_Get_Joint_Details_For_NDEBuffer">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="And">
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="And">
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="And">
+                                        <BinaryExpression.Left>
+                                          <BinaryExpression
+                                            NodeType="And">
+                                            <BinaryExpression.Left>
+                                              <BinaryExpression
+                                                NodeType="And">
+                                                <BinaryExpression.Left>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="flg_TOFD_UT" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="flg_TOFD_UT" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="flg_PA_UT" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="flg_PA_UT" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="flg_PT" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="flg_PT" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="flg_MT" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="flg_MT" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="Equal">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="flg_UT" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ParameterExpression
+                                            Parameter="flg_UT" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="Equal">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="flg_RT" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="flg_RT" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="Equal">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="WVF_No" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="WVF_No" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Joint_No" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Joint_No" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Module_ID" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Module_ID" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Joint_ID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Joint_ID" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="DrgNo" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="DrgNo" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_View_Get_Joint_Details_For_NDEBuffers" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="DrgNo"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'DrgNo' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Module_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Module_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="WVF_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'WVF_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_RT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_RT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_UT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_UT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_MT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_MT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_PT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_PT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_PA_UT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_PA_UT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="flg_TOFD_UT"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'flg_TOFD_UT' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_View_Get_Joint_Details_For_NDEBuffers">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_View_Get_Joint_Details_For_NDEBuffer" />
+        <IsView />
+        <SsdlProperty
+          MaxLength="50"
+          Name="DrgNo"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[DrgNo]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Joint_ID"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Joint_ID]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Module_ID"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Module_ID]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Joint_No"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Joint_No]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="WVF_No"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[WVF_No]" />
+        <SsdlProperty
+          Name="Insp_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Insp_Date]" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="flg_RT"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[flg_RT]" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="flg_UT"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[flg_UT]" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="flg_MT"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[flg_MT]" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="flg_PT"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[flg_PT]" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="flg_PA_UT"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[flg_PA_UT]" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="flg_TOFD_UT"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[flg_TOFD_UT]" />
+        <SsdlProperty
+          MaxLength="3"
+          Name="RT_Per"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[RT_Per]" />
+        <SsdlProperty
+          MaxLength="3"
+          Name="UT_Per"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[UT_Per]" />
+        <SsdlProperty
+          MaxLength="3"
+          Name="MT_Per"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[MT_Per]" />
+        <SsdlProperty
+          MaxLength="3"
+          Name="PT_Per"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[PT_Per]" />
+        <SsdlProperty
+          MaxLength="3"
+          Name="PA_UT_Per"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[PA_UT_Per]" />
+        <SsdlProperty
+          MaxLength="3"
+          Name="TOFD_UT_Per"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[TOFD_UT_Per]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Status_RT"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Status_RT]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Status_UT"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Status_UT]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Status_MT"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Status_MT]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Status_PT"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Status_PT]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Status_PA_UT"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Status_PA_UT]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Status_TOFD_UT"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Status_TOFD_UT]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="DefLength"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[DefLength]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="Desg"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Desg]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Stage"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[Stage]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="ReqFor"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_View_Get_Joint_Details_For_NDEBuffer/Properties[ReqFor]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

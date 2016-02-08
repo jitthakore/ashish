@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.SPS_LS.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <Screen
+    Name="Menu">
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="Offer"
+            Kind="Group">
+            <ContentItem
+              Name="MI"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Material Part Identification Offer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditsps_MPI]">
+                        <CallExpression.Attributes>
+                          <CreateNewEntity
+                            EntityType="sps_MPI"
+                            TargetParameter="!module/Methods[showAddEditsps_MPI]/Parameters[sps_MPI]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="para_ModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="para_IMIRProjectID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_IMIRProjectID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="Fitup"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Fit Up Offer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditsps_FTU]">
+                        <CallExpression.Attributes>
+                          <CreateNewEntity
+                            EntityType="sps_FTU"
+                            TargetParameter="!module/Methods[showAddEditsps_FTU]/Parameters[sps_FTU]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="para_ProjectID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ProjectID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="para_ModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="para_User_Name">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_User_Name]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="para_Plant">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_Plant]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="para_ProjectName">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ProjectName]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="WVisual"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Weld Visual Offer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditsps_WVF]">
+                        <CallExpression.Attributes>
+                          <CreateNewEntity
+                            EntityType="sps_WVF"
+                            TargetParameter="!module/Methods[showAddEditsps_WVF]/Parameters[sps_WVF]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="para_ModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="para_ProjectID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ProjectID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="PWHT"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="PWHT Offer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditsps_PWHT]">
+                        <CallExpression.Attributes>
+                          <CreateNewEntity
+                            EntityType="sps_PWHT"
+                            TargetParameter="!module/Methods[showAddEditsps_PWHT]/Parameters[sps_PWHT]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="para_ModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="NDERequest"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="NDE Request Offer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditsps_NDEReq]">
+                        <CallExpression.Attributes>
+                          <CreateNewEntity
+                            EntityType="sps_NDEReq"
+                            TargetParameter="!module/Methods[showAddEditsps_NDEReq]/Parameters[sps_NDEReq]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="para_ModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="PMI"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Positive Material Identification Offer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem
+            Name="Delete"
+            Kind="Group">
+            <ContentItem
+              Name="PWHTREQDel"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="PWHT Delete" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="WVisualDel"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Weld Visual Delete" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditsps_WVF1]">
+                        <CallExpression.Attributes>
+                          <CreateNewEntity
+                            EntityType="sps_WVF"
+                            TargetParameter="!module/Methods[showAddEditsps_WVF1]/Parameters[sps_WVF]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="para_ModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="FitupDel"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Fit Up Delete" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="MIDel"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Material Inspection Delete" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem
+            Name="Inspect"
+            Kind="Group">
+            <ContentItem
+              Name="MIInspect"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Material Inspection Inspect" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showInspect_MI1]">
+                        <ArgumentExpression
+                          Parameter="ParaModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="HardnessInspect"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Hardness Inspect" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEdit_Hardness_Report]">
+                        <CallExpression.Attributes>
+                          <CreateNewEntity
+                            EntityType="sps_Hardness"
+                            TargetParameter="!module/Methods[showAddEdit_Hardness_Report]/Parameters[sps_Hardness]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="ParaModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="FitUpInspect"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Fit Up Inspect" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showInspect_FITUP1]">
+                        <ArgumentExpression
+                          Parameter="ParaModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="WVisualInspect"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Weld Visual Inspect" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showWVFInspect1]">
+                        <ArgumentExpression
+                          Parameter="paraModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="PWHTInspect"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="PWHT Inspect" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showInspect_PWHT1]">
+                        <ArgumentExpression
+                          Parameter="ParaModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="ParaProjectID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ProjectID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="PMIInspect"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Positive Material Identification Inspect" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem
+            Name="Buffer"
+            Kind="Group">
+            <ContentItem
+              Name="WELBuffer"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="WEL Buffer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="RRBuffer"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="RR Buffer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="NDE100Buffer"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="NDE 100% Buffer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="NDEBuffer"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="NDE Buffer" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[WidthSizingMode]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="StretchToContainer"
+                        ResultType=":String" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditsps_NDEReq1]">
+                        <ArgumentExpression
+                          Parameter="paraModuleID">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Menu/Properties[para_ModuleID]" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[BrowseOnly]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenProperty
+        Name="para_ProjectID"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="para_ModuleID"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="para_UserID"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="para_Plant"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="para_User_Name"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="para_IMIRProjectID"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="para_ProjectName"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="wvf_no"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+    </Screen.Properties>
+  </Screen>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="showMenu">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="Menu" />
+      </ApplicationMethod.Attributes>
+      <ApplicationMethodParameter
+        Name="para_ProjectID"
+        ParameterType=":String" />
+      <ApplicationMethodParameter
+        Name="para_ModuleID"
+        ParameterType=":String" />
+      <ApplicationMethodParameter
+        Name="para_UserID"
+        ParameterType=":String" />
+      <ApplicationMethodParameter
+        Name="para_Plant"
+        ParameterType=":String" />
+      <ApplicationMethodParameter
+        Name="para_User_Name"
+        ParameterType=":String" />
+      <ApplicationMethodParameter
+        Name="para_IMIRProjectID"
+        ParameterType=":String" />
+      <ApplicationMethodParameter
+        Name="para_ProjectName"
+        ParameterType=":String" />
+    </ApplicationMethod>
+  </Application.Methods>
+</Application>

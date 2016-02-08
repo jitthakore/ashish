@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Get_FTU_For_inspect_closed">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Module_ID"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Drg_ID1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="Joint_ID"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Joint_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Part1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Part5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IMIRNO5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNO1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNO2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNO3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNO4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IDNO5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HeatNo5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="FTU_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Location"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EXEC_Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FTU_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Offer_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark_Detail"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DCN_No"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WPS"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Weld_Process"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Joint_Category"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Get_FTU_For_inspect_closeds"
+      EntityType="Get_FTU_For_inspect_closed" />
+    <QueryOperation
+      Name="Get_FTU_For_inspect_closeds_Single"
+      ReturnType="Get_FTU_For_inspect_closed">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="FTU_No" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="FTU_No" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Joint_No" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Joint_No" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Joint_ID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Joint_ID" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Module_ID" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Module_ID" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Get_FTU_For_inspect_closeds" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Module_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Module_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="FTU_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'FTU_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Get_FTU_For_inspect_closeds_SingleOrDefault"
+      ReturnType="Get_FTU_For_inspect_closed">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="FTU_No" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="FTU_No" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Joint_No" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Joint_No" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Joint_ID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Joint_ID" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Module_ID" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Module_ID" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Get_FTU_For_inspect_closeds" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Module_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Module_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="FTU_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'FTU_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Get_FTU_For_inspect_closeds">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Get_FTU_For_inspect_closed" />
+        <IsView />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Module_ID"
+          Nullable="False"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Module_ID]" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="Drg_ID1"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Drg_ID1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Joint_ID"
+          Nullable="False"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Joint_ID]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Joint_No"
+          Nullable="False"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Joint_No]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part1"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Part1]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part2"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Part2]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part3"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Part3]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part4"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Part4]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Part5"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Part5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO1"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IMIRNO1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO2"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IMIRNO2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO3"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IMIRNO3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO4"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IMIRNO4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IMIRNO5"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IMIRNO5]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNO1"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IDNO1]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNO2"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IDNO2]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNO3"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IDNO3]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNO4"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IDNO4]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="IDNO5"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[IDNO5]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo1"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[HeatNo1]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo2"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[HeatNo2]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo3"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[HeatNo3]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo4"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[HeatNo4]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="HeatNo5"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[HeatNo5]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="FTU_No"
+          Nullable="False"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[FTU_No]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Location"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Location]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="EXEC_Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[EXEC_Remark]" />
+        <SsdlProperty
+          Name="FTU_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="Get_FTU_For_inspect_closed/Properties[FTU_Date]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Offer_By"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Offer_By]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Remark_Detail"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Remark_Detail]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="DCN_No"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[DCN_No]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="WPS"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[WPS]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Weld_Process"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Weld_Process]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Joint_Category"
+          Nullable="True"
+          Type="varchar"
+          Property="Get_FTU_For_inspect_closed/Properties[Joint_Category]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

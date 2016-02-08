@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_WVFDetail">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="WVF_No_l2_WVF"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="FTU_No_l2_FTU"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="Joint_ID_l2_Joints"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Drg_ID_l2_DrgList"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RevID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DCN_No"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WPS_l2_WPS"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Weld_Process"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder4"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder5"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder6"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder7"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder8"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder9"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Welder10"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deleted_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deleted_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark_Det"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Desg"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="5" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":Int16?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QC_Remark_Det"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReasonForDelete"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WPS_WeldProc_Edited_by"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WPS_WeldProc_Edited_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Joint_Config"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReasonForRejection"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReasonForRejectionDesc"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Length"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Thickness"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_WVF"
+        Association="FK_sps_WVFDetail_sps_WVF"
+        FromEnd="sps_WVFDetail"
+        ToEnd="sps_WVF" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_WVFDetails"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_WVFDetail" />
+    <QueryOperation
+      Name="sps_WVFDetails_Single"
+      ReturnType="sps_WVFDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Joint_ID_l2_Joints" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Joint_ID_l2_Joints" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="WVF_No_l2_WVF" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="WVF_No_l2_WVF" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_WVFDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="WVF_No_l2_WVF"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'WVF_No_l2_WVF' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID_l2_Joints"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID_l2_Joints' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_WVFDetails_SingleOrDefault"
+      ReturnType="sps_WVFDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Joint_ID_l2_Joints" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Joint_ID_l2_Joints" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="WVF_No_l2_WVF" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="WVF_No_l2_WVF" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_WVFDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="WVF_No_l2_WVF"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'WVF_No_l2_WVF' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Joint_ID_l2_Joints"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Joint_ID_l2_Joints' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_WVFDetails">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_WVFDetail" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="WVF_No_l2_WVF"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[WVF_No_l2_WVF]" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="FTU_No_l2_FTU"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[FTU_No_l2_FTU]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Joint_ID_l2_Joints"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Joint_ID_l2_Joints]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_l2_DrgList"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Drg_ID_l2_DrgList]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="RevID"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[RevID]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="DCN_No"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[DCN_No]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="WPS_l2_WPS"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[WPS_l2_WPS]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Weld_Process"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Weld_Process]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder1"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder1]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder2"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder2]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder3"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder3]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder4"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder4]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder5"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder5]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder6"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder6]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder7"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder7]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder8"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder8]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder9"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder9]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Welder10"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Welder10]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Deleted_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Deleted_By]" />
+        <SsdlProperty
+          Name="Deleted_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_WVFDetail/Properties[Deleted_Date]" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="Remark_Det"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Remark_Det]" />
+        <SsdlProperty
+          MaxLength="5"
+          Name="Desg"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Desg]" />
+        <SsdlProperty
+          Name="Status"
+          Nullable="True"
+          Type="smallint"
+          Property="sps_WVFDetail/Properties[Status]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="QC_Remark_Det"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[QC_Remark_Det]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReasonForDelete"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[ReasonForDelete]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="WPS_WeldProc_Edited_by"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[WPS_WeldProc_Edited_by]" />
+        <SsdlProperty
+          Name="WPS_WeldProc_Edited_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_WVFDetail/Properties[WPS_WeldProc_Edited_Date]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Joint_Config"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[Joint_Config]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReasonForRejection"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[ReasonForRejection]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="ReasonForRejectionDesc"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVFDetail/Properties[ReasonForRejectionDesc]" />
+        <SsdlProperty
+          Name="Length"
+          Nullable="True"
+          Scale="2"
+          Type="numeric"
+          Property="sps_WVFDetail/Properties[Length]" />
+        <SsdlProperty
+          Name="Thickness"
+          Nullable="True"
+          Scale="2"
+          Type="numeric"
+          Property="sps_WVFDetail/Properties[Thickness]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

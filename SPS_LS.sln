@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "SPS_LS", "SPS_LS\SPS_LS.lsxtproj", "{24FC55B5-5940-4074-BCD5-5E503083C456}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPS_LS.Server", "SPS_LS\SPS_LS.Server\SPS_LS.Server.csproj", "{C8D207E7-2DC9-4207-A4D3-62198F5D9794}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "SPS_LS.HTMLClient", "SPS_LS\SPS_LS.HTMLClient\SPS_LS.HTMLClient.jsproj", "{C7C568A5-1693-4CD4-A67C-B40F48155C00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24FC55B5-5940-4074-BCD5-5E503083C456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24FC55B5-5940-4074-BCD5-5E503083C456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24FC55B5-5940-4074-BCD5-5E503083C456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24FC55B5-5940-4074-BCD5-5E503083C456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D207E7-2DC9-4207-A4D3-62198F5D9794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D207E7-2DC9-4207-A4D3-62198F5D9794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D207E7-2DC9-4207-A4D3-62198F5D9794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D207E7-2DC9-4207-A4D3-62198F5D9794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C568A5-1693-4CD4-A67C-B40F48155C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C568A5-1693-4CD4-A67C-B40F48155C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C568A5-1693-4CD4-A67C-B40F48155C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C568A5-1693-4CD4-A67C-B40F48155C00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

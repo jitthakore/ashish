@@ -1,0 +1,13 @@
+<SSRS>  
+
+  <SETTINGS>
+    <REPORT_TYPE>SSRS</REPORT_TYPE>
+    <SERVER>10.9.22.216</SERVER>
+    <LOCATION>MFYS</LOCATION>
+    <DATABASE>SPS</DATABASE>
+    <LINK>http://10.9.22.55:9090/ReportServer/Pages/ReportViewer.aspx?%2fMFYS%2f</LINK>
+    <LINK_LnTLOGO>http://10.9.22.55:9090/ReportServer/?%2fMFFH%2flntlogo_format%2fMFF</LINK_LnTLOGO>
+    <PLANT>MFYS</PLANT>
+  </SETTINGS>
+ 
+</SSRS>

@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_WVF">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="WVF_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="WVF_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Location"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Offer_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":Int16?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Edited_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Edited_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EXEC_Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QC_Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_PlanDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_Contractor_Module"
+        Association="FK_sps_WVF_sps_Contractor_Module"
+        FromEnd="sps_WVF"
+        ToEnd="sps_Contractor_Module" />
+      <NavigationProperty
+        Name="sps_WVFDetails"
+        Association="FK_sps_WVFDetail_sps_WVF"
+        FromEnd="sps_WVF"
+        ToEnd="sps_WVFDetail" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_sps_WVFDetail_sps_WVF">
+    <AssociationEnd
+      Name="sps_WVF"
+      Multiplicity="One"
+      EntityType="sps_WVF">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_WVFDetail"
+      Multiplicity="Many"
+      EntityType="sps_WVFDetail" />
+  </Association>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_WVFs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_WVF" />
+    <AssociationSet
+      Name="FK_sps_WVFDetail_sps_WVF"
+      Association="FK_sps_WVFDetail_sps_WVF">
+      <AssociationSetEnd
+        Name="sps_WVF"
+        EntitySet="sps_WVFs" />
+      <AssociationSetEnd
+        Name="sps_WVFDetail"
+        EntitySet="sps_WVFDetails" />
+    </AssociationSet>
+    <QueryOperation
+      Name="sps_WVFs_Single"
+      ReturnType="sps_WVF">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="WVF_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="WVF_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_WVFs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="WVF_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'WVF_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_WVFs_SingleOrDefault"
+      ReturnType="sps_WVF">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="WVF_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="WVF_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_WVFs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="WVF_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'WVF_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_WVFs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_WVF" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="WVF_No"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_WVF/Properties[WVF_No]" />
+        <SsdlProperty
+          Name="WVF_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_WVF/Properties[WVF_Date]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Location"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVF/Properties[Location]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Offer_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVF/Properties[Offer_By]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Insp_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVF/Properties[Insp_By]" />
+        <SsdlProperty
+          Name="Insp_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_WVF/Properties[Insp_Date]" />
+        <SsdlProperty
+          Name="Status"
+          Nullable="True"
+          Type="smallint"
+          Property="sps_WVF/Properties[Status]" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Edited_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVF/Properties[Edited_By]" />
+        <SsdlProperty
+          Name="Edited_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_WVF/Properties[Edited_Date]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="EXEC_Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVF/Properties[EXEC_Remark]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="QC_Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_WVF/Properties[QC_Remark]" />
+        <SsdlProperty
+          Name="Insp_PlanDate"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_WVF/Properties[Insp_PlanDate]" />
+        <SsdlForeignKeyProperty
+          Name="Contractor_ID_l2_Contractor"
+          Nullable="True"
+          Type="numeric"
+          PropertyName="Contractor_ID_l2_Contractor" />
+        <SsdlForeignKeyProperty
+          MaxLength="30"
+          Name="Module_ID_l2_Module"
+          Nullable="True"
+          Type="varchar"
+          PropertyName="Module_ID_l2_Module" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_WVFDetail_sps_WVF">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_WVFDetail_sps_WVF" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_WVFDetail_sps_WVF]/Members[sps_WVF]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="WVF_No" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_WVFDetail_sps_WVF]/Members[sps_WVFDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="WVF_No_l2_WVF" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

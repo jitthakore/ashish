@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_MCR">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="MCR_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Drg_ID_l2_Drg"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RevID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Project_ID"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MCR_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MCR_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_PlanDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Old_ReportNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_MCR_Details"
+        Association="FK_sps_MCR_Detail_sps_MCR"
+        FromEnd="sps_MCR"
+        ToEnd="sps_MCR_Detail" />
+      <NavigationProperty
+        Name="sps_Contractor_Module"
+        Association="FK_sps_MCR_sps_Contractor_Module"
+        FromEnd="sps_MCR"
+        ToEnd="sps_Contractor_Module" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_sps_MCR_Detail_sps_MCR">
+    <AssociationEnd
+      Name="sps_MCR"
+      Multiplicity="One"
+      EntityType="sps_MCR">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_MCR_Detail"
+      Multiplicity="Many"
+      EntityType="sps_MCR_Detail" />
+  </Association>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_MCRs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_MCR" />
+    <AssociationSet
+      Name="FK_sps_MCR_Detail_sps_MCR"
+      Association="FK_sps_MCR_Detail_sps_MCR">
+      <AssociationSetEnd
+        Name="sps_MCR"
+        EntitySet="sps_MCRs" />
+      <AssociationSetEnd
+        Name="sps_MCR_Detail"
+        EntitySet="sps_MCR_Details" />
+    </AssociationSet>
+    <QueryOperation
+      Name="sps_MCRs_Single"
+      ReturnType="sps_MCR">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="MCR_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="MCR_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_MCRs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="MCR_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'MCR_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_MCRs_SingleOrDefault"
+      ReturnType="sps_MCR">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="MCR_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="MCR_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_MCRs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="MCR_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'MCR_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_MCRs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_MCR" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MCR_No"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_MCR/Properties[MCR_No]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Drg_ID_l2_Drg"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_MCR/Properties[Drg_ID_l2_Drg]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="RevID"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_MCR/Properties[RevID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Project_ID"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_MCR/Properties[Project_ID]" />
+        <SsdlProperty
+          Name="MCR_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_MCR/Properties[MCR_Date]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MCR_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_MCR/Properties[MCR_By]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_MCR/Properties[Remark]" />
+        <SsdlProperty
+          Name="Insp_PlanDate"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_MCR/Properties[Insp_PlanDate]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Old_ReportNo"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_MCR/Properties[Old_ReportNo]" />
+        <SsdlForeignKeyProperty
+          Name="Contractor_ID_l2_Contractor"
+          Nullable="True"
+          Type="numeric"
+          PropertyName="Contractor_ID_l2_Contractor" />
+        <SsdlForeignKeyProperty
+          MaxLength="30"
+          Name="Module_ID"
+          Nullable="True"
+          Type="varchar"
+          PropertyName="Module_ID" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_MCR_Detail_sps_MCR">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_MCR_Detail_sps_MCR" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_MCR_Detail_sps_MCR]/Members[sps_MCR]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="MCR_No" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_MCR_Detail_sps_MCR]/Members[sps_MCR_Detail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="MCR_No_l2_MCR" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

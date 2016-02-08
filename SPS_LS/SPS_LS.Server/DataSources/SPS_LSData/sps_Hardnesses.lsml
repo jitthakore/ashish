@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="sps_Hardness">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Hardness_No"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="40" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Hardness_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Location"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Offer_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_By"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_Date"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Status"
+        PropertyType=":Int16?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QC_Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EXEC_Remark"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Insp_PlanDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InstID_No"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cal_Due_Dt"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AcceptanceValue"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="sps_Contractor_Module"
+        Association="FK_sps_Hardness_sps_Contractor_Module"
+        FromEnd="sps_Hardness"
+        ToEnd="sps_Contractor_Module" />
+      <NavigationProperty
+        Name="sps_HardnessDetails"
+        Association="FK_sps_HardnessDetail_sps_Hardness"
+        FromEnd="sps_Hardness"
+        ToEnd="sps_HardnessDetail" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_sps_HardnessDetail_sps_Hardness">
+    <AssociationEnd
+      Name="sps_Hardness"
+      Multiplicity="One"
+      EntityType="sps_Hardness">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="sps_HardnessDetail"
+      Multiplicity="Many"
+      EntityType="sps_HardnessDetail" />
+  </Association>
+  <EntityContainer
+    Name="SPS_LSData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="sps_Hardnesses"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="sps_Hardness" />
+    <AssociationSet
+      Name="FK_sps_HardnessDetail_sps_Hardness"
+      Association="FK_sps_HardnessDetail_sps_Hardness">
+      <AssociationSetEnd
+        Name="sps_Hardness"
+        EntitySet="sps_Hardnesses" />
+      <AssociationSetEnd
+        Name="sps_HardnessDetail"
+        EntitySet="sps_HardnessDetails" />
+    </AssociationSet>
+    <QueryOperation
+      Name="sps_Hardnesses_Single"
+      ReturnType="sps_Hardness">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Hardness_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Hardness_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Hardnesses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Hardness_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Hardness_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="sps_Hardnesses_SingleOrDefault"
+      ReturnType="sps_Hardness">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Hardness_No" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Hardness_No" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="sps_Hardnesses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Hardness_No"
+        ParameterType="Microsoft.LightSwitch:String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Hardness_No' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="SPS_LSDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="sps_Hardnesses">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="sps_Hardness" />
+        <SsdlProperty
+          MaxLength="40"
+          Name="Hardness_No"
+          Nullable="False"
+          Type="varchar"
+          Property="sps_Hardness/Properties[Hardness_No]" />
+        <SsdlProperty
+          Name="Hardness_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_Hardness/Properties[Hardness_Date]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Location"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Hardness/Properties[Location]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Offer_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Hardness/Properties[Offer_By]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Insp_By"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Hardness/Properties[Insp_By]" />
+        <SsdlProperty
+          Name="Insp_Date"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_Hardness/Properties[Insp_Date]" />
+        <SsdlProperty
+          Name="Status"
+          Nullable="True"
+          Type="smallint"
+          Property="sps_Hardness/Properties[Status]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="QC_Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Hardness/Properties[QC_Remark]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="EXEC_Remark"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Hardness/Properties[EXEC_Remark]" />
+        <SsdlProperty
+          Name="Insp_PlanDate"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_Hardness/Properties[Insp_PlanDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="InstID_No"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Hardness/Properties[InstID_No]" />
+        <SsdlProperty
+          Name="Cal_Due_Dt"
+          Nullable="True"
+          Type="datetime"
+          Property="sps_Hardness/Properties[Cal_Due_Dt]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="AcceptanceValue"
+          Nullable="True"
+          Type="varchar"
+          Property="sps_Hardness/Properties[AcceptanceValue]" />
+        <SsdlForeignKeyProperty
+          Name="Contractor_ID_l2_Contractor"
+          Nullable="True"
+          Type="numeric"
+          PropertyName="Contractor_ID_l2_Contractor" />
+        <SsdlForeignKeyProperty
+          MaxLength="30"
+          Name="Module_ID_l2_Module"
+          Nullable="True"
+          Type="varchar"
+          PropertyName="Module_ID_l2_Module" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_sps_HardnessDetail_sps_Hardness">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_sps_HardnessDetail_sps_Hardness" />
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_HardnessDetail_sps_Hardness]/Members[sps_Hardness]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Hardness_No" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="SPS_LSData/Members[FK_sps_HardnessDetail_sps_Hardness]/Members[sps_HardnessDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Hardness_No" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

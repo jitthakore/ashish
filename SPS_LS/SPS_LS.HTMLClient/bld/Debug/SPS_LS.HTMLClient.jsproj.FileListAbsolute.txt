@@ -1,0 +1,10 @@
+C:\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+E:\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+E:\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Users\ipt02\Desktop\ashish\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Users\ipt02\Desktop\ashish\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+M:\IPT\2016\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+M:\IPT\2016\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Users\ipt02\Desktop\nirali\SPS_LS\SPS_LS\SPS_LS.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

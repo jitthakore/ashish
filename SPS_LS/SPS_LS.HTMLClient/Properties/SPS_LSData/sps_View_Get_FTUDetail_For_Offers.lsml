@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.SPS_LS.HTMLClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:sps_View_Get_FTUDetail_For_Offer" />
+      <SummaryProperty
+        Property="sps_View_Get_FTUDetail_For_Offer/Properties[Drg_ID]" />
+    </EntityType.Attributes>
+  </EntityType>
+</Application>

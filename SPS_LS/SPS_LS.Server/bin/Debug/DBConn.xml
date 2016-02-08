@@ -1,0 +1,31 @@
+<DBConn>
+ 
+
+  <ConnName name = "SPS">
+    <ConnPara name = "DataSource">10.7.147.18\sqlexpress_2012</ConnPara>
+    <ConnPara name = "InitialCatalog">SPS_LS</ConnPara>
+    <ConnPara name = "UserID">IPT_JITUser</ConnPara>
+    <ConnPara name = "Password">IPT_JITUser</ConnPara>
+  </ConnName>
+  <ConnName name = "NDT">
+    <ConnPara name = "DataSource">10.7.147.18\sqlexpress_2012</ConnPara>
+    <ConnPara name = "InitialCatalog">NDT</ConnPara>
+    <ConnPara name = "UserID">IPT_JITUser</ConnPara>
+    <ConnPara name = "Password">IPT_JITUser</ConnPara>
+  </ConnName>
+  <ConnName name = "SAP">
+    <ConnPara name = "DataSource">10.7.147.18\sqlexpress_2012</ConnPara>
+    <ConnPara name = "InitialCatalog">SAP</ConnPara>
+    <ConnPara name = "UserID">IPT_JITUser</ConnPara>
+    <ConnPara name = "Password">IPT_JITUser</ConnPara>
+  </ConnName>
+  <ConnName name = "IMCS">
+    <ConnPara name = "DataSource">10.7.147.18\sqlexpress_2012</ConnPara>
+    <ConnPara name = "InitialCatalog">IMCS</ConnPara>
+    <ConnPara name = "UserID">IPT_JITUser</ConnPara>
+    <ConnPara name = "Password">IPT_JITUser</ConnPara>
+  </ConnName>
+  
+  
+  
+  </DBConn>

@@ -1,0 +1,14 @@
+<SSRS>
+
+
+  <SETTINGS name="REPORT_TYPE">SSRS</SETTINGS>
+  <SETTINGS name="Server">EALPSMFF</SETTINGS>
+  <SETTINGS name="LOCATION">MFFH</SETTINGS>
+  <SETTINGS name="DATABASE">SPS</SETTINGS>
+  <SETTINGS name="LINK">http://10.7.144.62:9090/ReportServer/Pages/ReportViewer.aspx?%2fMFFH%2f</SETTINGS>
+  
+  <SETTINGS name="LINK_LnTLOGO">http://10.7.144.62:9090/ReportServer/Pages/ReportViewer.aspx?%2fMFFH%2f</SETTINGS>
+  <SETTINGS name="DMS_PATH">\\10.7.144.22\projects\DMS\</SETTINGS>
+  <SETTINGS name="DMS_URL">http://10.7.144.37:9903/</SETTINGS>
+  
+</SSRS> 
